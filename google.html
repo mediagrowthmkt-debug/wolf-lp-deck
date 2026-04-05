@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck Renovation Massachusetts | Wolf Carpenters | Expert Deck Builders</title>
+    <meta name="description" content="Professional deck renovation in Massachusetts. Composite & wood decks built to last. No wobble, no rot, no shortcuts. Get your free estimate today!">
+    
+    <!-- Performance Optimization -->
+    <meta name="theme-color" content="#E1BA47">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Tracking Source (non-blocking) -->
+    <script>sessionStorage.setItem('fonte','google');sessionStorage.setItem('plataforma','GOOGLE');</script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="0 - Brand Logo/brand-logo-wolfcarpenters.webp">
+    <link rel="apple-touch-icon" href="0 - Brand Logo/brand-logo-wolfcarpenters.png">
+    
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://backend.leadconnectorhq.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="0 - Brand Logo/brand-logo-wolfcarpenters.webp" as="image">
+    <link rel="preload" href="decks reais/deck_duplo_nivel_noturno.webp" as="image" fetchpriority="high">
+    
+    <!-- Fonts (non-render-blocking) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+
+    <style>
+        /* === RESET & VARIABLES === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #E1BA47;
+            --secondary-color: #010101;
+            --support-color: #F5F6F7;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; content-visibility: auto; }
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; overflow-x: hidden; }
+        /* Off-screen sections lazy render */
+        .story-section, .before-after-section, .gallery-section, .benefits-section,
+        .team-section, .process-section, .faq-section, .testimonials-section, .cta-section {
+            content-visibility: auto; contain-intrinsic-size: auto 600px;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 1.2; }
+
+        /* === NAVIGATION === */
+        .navbar {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(1, 1, 1, 0.95);
+            padding: 0; z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar .container {
+            max-width: 1200px; margin: 0 auto; padding: 5px 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { position: relative; z-index: 1001; margin: -10px 0 -30px 0; }
+        .logo img { height: 143px; width: auto; display: block; }
+        .nav-cta {
+            background: var(--primary-color); color: var(--secondary-color);
+            padding: 12px 30px; text-decoration: none; border-radius: 5px;
+            font-weight: 600; font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease; border: 2px solid var(--primary-color);
+        }
+        .nav-cta:hover { background: transparent; color: var(--primary-color); transform: translateY(-2px); }
+
+        /* === HERO SECTION === */
+        .hero-section {
+            position: relative; min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; padding-top: 120px; padding-bottom: 60px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #2a2a2a 100%);
+        }
+        .hero-slideshow {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;
+        }
+        .hero-slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0; visibility: hidden;
+            transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+        }
+        .hero-slide.active { opacity: 1; visibility: visible; }
+        .hero-slide img {
+            width: 100%; height: 100%; object-fit: cover; object-position: center;
+            display: block;
+        }
+        .hero-slide.active img { animation: kenBurnsZoom 15s ease-in-out forwards; will-change: transform; }
+        @keyframes kenBurnsZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(1,1,1,0.90) 0%, rgba(1,1,1,0.75) 100%);
+            z-index: 1; animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hero-content {
+            color: var(--white); max-width: 1200px; padding: 40px 20px;
+            animation: slideUp 1s ease-out;
+            display: flex; gap: 60px; align-items: center; flex-wrap: wrap;
+            width: 100%; position: relative; z-index: 2;
+        }
+        .hero-text { flex: 1; min-width: 400px; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-text h1 {
+            font-size: 2.8rem; margin-bottom: 14px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5);
+            line-height: 1.1; font-weight: 800; color: #fff;
+        }
+        .hero-text .highlight { color: var(--primary-color); }
+        .hero-text p {
+            font-size: 1.05rem; margin-bottom: 18px; line-height: 1.5;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8); color: #fff; font-weight: 400;
+        }
+
+        /* === TYPEWRITER === */
+        .typewriter-cursor {
+            display: inline-block; color: var(--primary-color);
+            font-weight: 700; animation: blink-cursor 0.7s step-end infinite;
+        }
+        @keyframes blink-cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* === HERO FORM === */
+        .hero-form-container {
+            background: var(--white); border-radius: 15px; padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3); min-width: 380px; max-width: 420px;
+            color: var(--text-dark);
+        }
+        .hero-form-container h3 {
+            font-size: 1.4rem; margin-bottom: 8px; color: var(--secondary-color);
+        }
+        .hero-form-container > p {
+            font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;
+            text-shadow: none;
+        }
+        .form-group { margin-bottom: 15px; }
+        .form-group label {
+            display: block; margin-bottom: 5px; font-weight: 600;
+            font-size: 0.85rem; color: var(--text-dark);
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px 15px; border: 2px solid #e0e0e0;
+            border-radius: 8px; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.3s ease; background: #fafafa;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--primary-color); background: #fff;
+        }
+        .submit-button {
+            width: 100%; padding: 16px; background: var(--primary-color);
+            color: var(--secondary-color); border: none; border-radius: 8px;
+            font-size: 1.1rem; font-weight: 700; font-family: 'Montserrat', sans-serif;
+            cursor: pointer; transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(225,186,71,0.3);
+        }
+        .submit-button:hover { background: #c9a53e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(225,186,71,0.4); }
+
+        /* === MOBILE MARQUEE === */
+        .mobile-marquee-strip { display: none; }
+        @media (max-width: 768px) {
+            .mobile-marquee-strip {
+                display: block; width: 100%; overflow: hidden;
+                background: #111; padding: 0; margin-top: 20px; margin-bottom: 0; position: relative;
+            }
+            .mobile-marquee-strip::before, .mobile-marquee-strip::after {
+                content: ''; position: absolute; top: 0; bottom: 0; width: 40px; z-index: 2; pointer-events: none;
+            }
+            .mobile-marquee-strip::before { left: 0; background: linear-gradient(to right, #111, transparent); }
+            .mobile-marquee-strip::after { right: 0; background: linear-gradient(to left, #111, transparent); }
+            .mobile-marquee-track {
+                display: flex; width: max-content; animation: marquee-scroll 22s linear infinite;
+            }
+            .mobile-marquee-track:hover { animation-play-state: paused; }
+            .mobile-marquee-item {
+                flex-shrink: 0; width: 200px; margin-right: 10px;
+                position: relative; border-radius: 8px; overflow: hidden;
+            }
+            .mobile-marquee-item img { width: 100%; height: 150px; object-fit: cover; display: block; }
+            .mobile-marquee-label {
+                position: absolute; bottom: 0; left: 0; right: 0;
+                background: linear-gradient(transparent, rgba(0,0,0,0.85));
+                color: #fff; font-size: 0.65rem; font-weight: 700;
+                text-transform: uppercase; letter-spacing: 2px; padding: 18px 8px 6px; text-align: center;
+            }
+            .mobile-marquee-title {
+                text-align: center; color: #fff; font-size: 0.7rem; font-weight: 700;
+                text-transform: uppercase; letter-spacing: 3px; padding: 10px 0 8px; background: #111;
+            }
+            .mobile-marquee-title span { color: var(--primary-color); }
+            @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        }
+
+        /* === HERO MARQUEE DESKTOP === */
+        .hero-marquee-wrap { display: none; }
+        @media (min-width: 769px) {
+            .hero-marquee-wrap {
+                display: block; width: 100%; overflow: hidden;
+                margin: 26px 0 20px; position: relative; border-radius: 12px;
+            }
+            .hero-marquee-wrap::before, .hero-marquee-wrap::after {
+                content: ''; position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2; pointer-events: none;
+            }
+            .hero-marquee-wrap::before { left: 0; background: linear-gradient(to right, rgba(0,0,0,0.75), transparent); }
+            .hero-marquee-wrap::after { right: 0; background: linear-gradient(to left, rgba(0,0,0,0.75), transparent); }
+            .hero-marquee-track {
+                display: flex; width: max-content; animation: hero-marquee-anim 22s linear infinite;
+            }
+            .hero-marquee-track:hover { animation-play-state: paused; }
+            .hero-marquee-item {
+                flex-shrink: 0; width: 220px; margin-right: 12px;
+                position: relative; border-radius: 10px; overflow: hidden;
+                border: 2px solid rgba(255,255,255,0.12);
+                box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+            }
+            .hero-marquee-item img {
+                width: 100%; height: 155px; object-fit: cover; display: block;
+                transition: transform 0.35s ease;
+            }
+            .hero-marquee-item:hover img { transform: scale(1.06); }
+            .hero-marquee-label {
+                position: absolute; bottom: 0; left: 0; right: 0;
+                background: linear-gradient(transparent, rgba(0,0,0,0.88));
+                color: #fff; font-size: 0.62rem; font-weight: 700;
+                text-transform: uppercase; letter-spacing: 2.5px;
+                padding: 20px 8px 7px; text-align: center;
+            }
+            @keyframes hero-marquee-anim { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        }
+
+        /* === SECTION COMMON === */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-title {
+            font-size: 2.2rem; text-align: center; margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        .section-subtitle {
+            text-align: center; color: var(--text-light); font-size: 1.1rem;
+            max-width: 650px; margin: 0 auto 40px;
+        }
+
+        /* === STORY COPY SECTIONS === */
+        .story-section {
+            padding: 70px 0;
+            background: var(--support-color);
+        }
+        .story-section.dark {
+            background: #0a0a0a;
+        }
+        .story-content {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .story-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+        .story-section.dark .story-content h2 { color: #fff; }
+        .story-section.dark .story-content p { color: rgba(255,255,255,0.85); }
+        .story-content p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        .story-content .accent {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* === BEFORE & AFTER GALLERY === */
+        .before-after-section {
+            padding: 70px 0;
+            background: #0a0a0a;
+        }
+        .before-after-section .section-title { color: #fff; }
+        .before-after-section .section-subtitle { color: #aaa; }
+        .ba-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .ba-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            border: 2px solid rgba(255,255,255,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .ba-card:hover { transform: translateY(-6px); box-shadow: 0 12px 44px rgba(0,0,0,0.65); }
+        .ba-card img {
+            width: 100%; height: 280px; object-fit: cover; display: block;
+        }
+        .ba-card-label {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            color: #fff; font-size: 0.75rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2.5px;
+            padding: 28px 12px 10px; text-align: center;
+        }
+        .ba-card-label.before { border-bottom: 3px solid #e74c3c; }
+        .ba-card-label.after { border-bottom: 3px solid #2ecc71; }
+
+        /* === TRUST BADGES === */
+        .trust-badges-section {
+            background: #0d0d0d; padding: 48px 0 52px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .trust-label {
+            text-align: center; color: rgba(255,255,255,0.45);
+            font-size: 0.72rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 4px; margin-bottom: 32px;
+        }
+        .trust-badges-grid {
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 16px; max-width: 900px; margin: 0 auto;
+        }
+        .trust-badge-card {
+            display: flex; align-items: center; gap: 14px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 12px; padding: 18px 24px;
+            min-width: 200px; flex: 1 1 200px; max-width: 260px;
+            transition: background 0.25s, border-color 0.25s, transform 0.2s;
+        }
+        .trust-badge-card:hover {
+            background: rgba(225,186,71,0.07);
+            border-color: rgba(225,186,71,0.35);
+            transform: translateY(-3px);
+        }
+        .trust-badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; }
+        .trust-badge-value {
+            color: var(--primary-color); font-size: 1rem; font-weight: 800;
+            line-height: 1.2; font-family: 'Montserrat', sans-serif;
+        }
+        .trust-badge-desc { color: rgba(255,255,255,0.6); font-size: 0.78rem; font-weight: 400; margin-top: 2px; }
+        @media (max-width: 768px) {
+            .trust-badge-card { min-width: 140px; max-width: 47%; padding: 14px 16px; }
+            .trust-badge-icon { font-size: 1.6rem; }
+            .trust-badge-value { font-size: 0.9rem; }
+        }
+
+        /* === PORTFOLIO GALLERY === */
+        .gallery-section { padding: 70px 0; background: var(--support-color); }
+        .portfolio-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-item {
+            position: relative; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-item:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+        .portfolio-item img { width: 100%; height: 280px; object-fit: cover; display: block; }
+        .portfolio-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white; padding: 30px 20px 15px; text-align: left;
+        }
+        .portfolio-overlay h4 { font-size: 1.1rem; margin-bottom: 3px; }
+        .portfolio-overlay p { font-size: 0.85rem; opacity: 0.9; }
+
+        /* === BENEFITS === */
+        .benefits-section { padding: 80px 0; background: var(--white); }
+        .benefits-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;
+        }
+        .benefit-item {
+            background: #fff; padding: 35px 30px; border-radius: 12px;
+            border: 1px solid #eee; text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .benefit-item:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .benefit-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .benefit-item h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--secondary-color); }
+        .benefit-item p { color: var(--text-light); line-height: 1.6; }
+
+        /* === TEAM === */
+        .team-section { padding: 80px 0; background: var(--support-color); }
+        .team-content {
+            display: flex; gap: 50px; align-items: center; flex-wrap: wrap; margin-bottom: 40px;
+        }
+        .team-images { flex: 1; min-width: 350px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .team-image-main { grid-column: 1 / -1; }
+        .team-image-main img, .team-image-small img {
+            width: 100%; height: 100%; object-fit: cover; border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        .team-image-main img { height: 300px; }
+        .team-image-small img { height: 180px; }
+        .team-text { flex: 1; min-width: 350px; }
+
+        /* === TEAM VIDEO === */
+        .team-video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            background: #000;
+        }
+        .team-vid {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .team-mute-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.4);
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(6px);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, border-color 0.2s, transform 0.2s;
+            z-index: 10;
+            padding: 0;
+        }
+        .team-mute-btn:hover {
+            background: rgba(0,0,0,0.9);
+            border-color: var(--primary-color, #E1BA47);
+            transform: scale(1.1);
+        }
+        .team-mute-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            display: block;
+        }
+        .team-mute-btn .icon-sound  { display: block; }
+        .team-mute-btn .icon-muted  { display: none; }
+        .team-mute-btn.is-muted .icon-sound { display: none; }
+        .team-mute-btn.is-muted .icon-muted { display: block; }
+        .family-badge {
+            display: inline-block; background: rgba(225,186,71,0.1);
+            color: var(--primary-color); padding: 8px 16px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;
+            border: 1px solid rgba(225,186,71,0.3);
+        }
+        .team-text h2 { font-size: 2rem; margin-bottom: 20px; }
+        .team-text p { margin-bottom: 15px; color: var(--text-light); line-height: 1.7; }
+        .team-stats { display: flex; gap: 30px; margin-top: 25px; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-size: 2rem; font-weight: 800; color: var(--primary-color);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .stat-label { font-size: 0.85rem; color: var(--text-light); font-weight: 600; }
+
+        /* === PROCESS === */
+        .process-section { padding: 80px 0; background: var(--white); }
+        .process-steps {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px;
+        }
+        .process-step {
+            text-align: center; padding: 30px 20px;
+            border-radius: 12px; background: #fafafa;
+            border: 1px solid #eee; transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .process-step:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .step-number {
+            width: 50px; height: 50px; background: var(--primary-color);
+            color: var(--secondary-color); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.2rem; margin: 0 auto 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .process-step h3 { margin-bottom: 10px; font-size: 1.1rem; }
+        .process-step p { color: var(--text-light); font-size: 0.95rem; }
+
+        /* === FAQ === */
+        .faq-section { padding: 80px 0; background: var(--support-color); }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: var(--white); border-radius: 10px;
+            margin-bottom: 15px; overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            padding: 20px 25px; display: flex; justify-content: space-between;
+            align-items: center; cursor: pointer; transition: background 0.3s;
+        }
+        .faq-question:hover { background: rgba(225,186,71,0.05); }
+        .faq-question h3 { font-size: 1.05rem; color: var(--text-dark); flex: 1; }
+        .faq-icon {
+            font-size: 1.5rem; color: var(--primary-color);
+            font-weight: 300; transition: transform 0.3s;
+        }
+        .faq-answer {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .faq-answer p { padding: 0 25px 20px; color: var(--text-light); line-height: 1.7; }
+
+        /* === TESTIMONIALS === */
+        .testimonials-section { padding: 80px 0; background: var(--white); }
+        .testimonials-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;
+        }
+        .testimonial-card {
+            background: #fff; padding: 30px; border-radius: 12px;
+            border: 1px solid #eee; transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .testimonial-rating { color: var(--primary-color); font-size: 1.2rem; margin-bottom: 12px; }
+        .testimonial-text {
+            font-style: italic; color: var(--text-light);
+            line-height: 1.7; margin-bottom: 18px; font-size: 0.95rem;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 12px; }
+        .testimonial-avatar {
+            width: 50px; height: 50px; border-radius: 50%; object-fit: cover;
+            border: 2px solid var(--primary-color);
+        }
+        .testimonial-info h4 { font-size: 0.95rem; }
+        .testimonial-info p { font-size: 0.8rem; color: var(--text-light); }
+
+        /* === CTA / FINAL FORM === */
+        .cta-section { padding: 80px 0; background: var(--secondary-color); }
+        .cta-button {
+            display: inline-block; background: var(--primary-color);
+            color: var(--secondary-color); padding: 16px 40px;
+            border-radius: 8px; text-decoration: none;
+            font-weight: 700; font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(225,186,71,0.3);
+        }
+        .cta-button:hover { background: #c9a53e; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(225,186,71,0.4); }
+
+        /* === FIXED CALL BUTTON === */
+        .call-button-fixed {
+            position: fixed; bottom: 25px; right: 25px;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: var(--primary-color);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; text-decoration: none;
+            box-shadow: 0 4px 20px rgba(225,186,71,0.4);
+            z-index: 999; animation: pulse-call 2s ease-in-out infinite;
+        }
+        @keyframes pulse-call {
+            0%, 100% { box-shadow: 0 4px 20px rgba(225,186,71,0.4); }
+            50% { box-shadow: 0 4px 30px rgba(225,186,71,0.7); }
+        }
+
+        /* === SCARCITY === */
+        .scarcity-tag {
+            display: inline-flex; align-items: center; gap: 6px;
+            margin-top: 10px; font-size: 0.78rem; font-weight: 700; color: #fff;
+            background: rgba(220,53,69,0.15); border: 1px solid rgba(220,53,69,0.5);
+            border-radius: 20px; padding: 5px 12px; letter-spacing: 0.3px;
+        }
+        .scarcity-tag::before { content: '⚡'; font-size: 0.82rem; }
+        .scarcity-tag strong { color: #ff6b6b; }
+        .scarcity-tag.dark {
+            color: #c0392b; background: rgba(220,53,69,0.08);
+            border-color: rgba(220,53,69,0.3);
+        }
+        .scarcity-tag.dark strong { color: #c0392b; }
+        .scarcity-wrap { text-align: center; margin-top: 8px; }
+
+        /* === FOOTER === */
+        footer {
+            background: var(--secondary-color); color: rgba(255,255,255,0.6);
+            padding: 30px 0; text-align: center; font-size: 0.85rem;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 968px) {
+            .hero-section { overflow: visible; padding-bottom: 20px; }
+        }
+        @media (max-width: 768px) {
+            .navbar .container { padding: 5px 12px; }
+            .logo { margin: -5px 0 -20px 0; }
+            .logo img { height: 90px; }
+            .nav-cta { padding: 8px 14px; font-size: 0.75rem; white-space: nowrap; }
+            .hero-content { flex-direction: column; gap: 30px; padding: 20px 15px; }
+            .hero-text { min-width: unset; }
+            .hero-text h1 { font-size: 1.8rem; }
+            .hero-form-container { min-width: unset; max-width: 100%; padding: 30px 20px; }
+            .section-title { font-size: 1.6rem; }
+            .team-content { flex-direction: column; }
+            .team-images { min-width: unset; }
+            .team-text { min-width: unset; }
+            .team-vid { height: 220px; }
+            .ba-grid { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .cta-section .cta-flex { flex-direction: column !important; }
+            .cta-section .cta-left { min-width: unset !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Typewriter Script -->
+    <script>
+    (function() {
+        var phrases = [
+            "DECK RENOVATION CONTRACTOR",
+            "DECK BUILDING COMPANY"
+        ];
+        var el, idx = 0, charIdx = 0, deleting = false;
+        var typeSpeed = 80, deleteSpeed = 45, pauseAfterType = 1800, pauseAfterDelete = 400;
+
+        function type() {
+            el = el || document.getElementById('typewriter-text');
+            if (!el) { setTimeout(type, 100); return; }
+            var current = phrases[idx];
+            if (!deleting) {
+                el.textContent = current.substring(0, charIdx + 1);
+                charIdx++;
+                if (charIdx === current.length) { deleting = true; setTimeout(type, pauseAfterType); }
+                else { setTimeout(type, typeSpeed); }
+            } else {
+                el.textContent = current.substring(0, charIdx - 1);
+                charIdx--;
+                if (charIdx === 0) { deleting = false; idx = (idx + 1) % phrases.length; setTimeout(type, pauseAfterDelete); }
+                else { setTimeout(type, deleteSpeed); }
+            }
+        }
+
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', type); }
+        else { type(); }
+    })();
+    </script>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="0 - Brand Logo/brand-logo-wolfcarpenters.webp" alt="Wolf Carpenters Logo" width="200" height="202">
+            </div>
+            <a href="#contact-form" class="nav-cta">Get Your Free Deck Estimate →</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-slideshow">
+            <div class="hero-slide active">
+                <img src="decks reais/deck_duplo_nivel_noturno.webp" alt="Beautiful deck renovation at night with pergola" width="1200" height="800" fetchpriority="high" decoding="async">
+            </div>
+            <div class="hero-slide">
+                <img src="decks reais/deck_cinza_grande_vista_aerea_com_aro_de_basquete_inverno.webp" alt="Large composite deck with outdoor living space" width="1200" height="800" decoding="async" loading="lazy">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-tagline" style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px;">
+                    <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                </p>
+                <h1>Looking for Deck Renovation in Massachusetts? <span class="highlight">Read This First.</span></h1>
+                <p>You're searching for deck renovation in Massachusetts. That means one of two things &mdash; your deck is already a problem, or it's about to become one.<br><strong>Either way, you're right to be here.</strong></p>
+
+                <!-- Hero Marquee Desktop only -->
+                <div class="hero-marquee-wrap">
+                    <div class="hero-marquee-track">
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_escada_composito_marrom_com_corrimao_branco_e_trelica.webp" alt="Natural wood deck" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Wood Deck</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_cinza_com_pergola_branca_e_cadeiras.webp" alt="Composite deck with furniture" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Composite</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_portico_branco_casa_amarela_vista_da_rua.webp" alt="Deck with fire pit area" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Fire Pit Area</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_portico_branco_casa_amarela_vista_da_rua.webp" alt="Deck with railing" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Railing</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_duplo_nivel_noturno.webp" alt="Night deck with pergola" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Pergola</div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_escada_composito_marrom_com_corrimao_branco_e_trelica.webp" alt="Natural wood deck" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Wood Deck</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_cinza_com_pergola_branca_e_cadeiras.webp" alt="Composite deck with furniture" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Composite</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_portico_branco_casa_amarela_vista_da_rua.webp" alt="Deck with fire pit area" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Fire Pit Area</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_portico_branco_casa_amarela_vista_da_rua.webp" alt="Deck with railing" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Railing</div>
+                        </div>
+                        <div class="hero-marquee-item">
+                            <img src="decks reais/deck_duplo_nivel_noturno.webp" alt="Night deck with pergola" width="220" height="155" loading="lazy" decoding="async">
+                            <div class="hero-marquee-label">Pergola</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Form -->
+            <div class="hero-form-container">
+                <h3>Free Deck Estimate No Obligation</h3>
+                <p>Book your slot and we'll come assess your deck, <strong>on us.</strong></p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="deck-type">What kind of deck project? *</label>
+                        <select id="deck-type" name="deck-type" required>
+                            <option value="">Select project type</option>
+                            <option value="full-renovation">Full Deck Renovation</option>
+                            <option value="new-deck">New Deck Build</option>
+                            <option value="composite-upgrade">Composite Upgrade</option>
+                            <option value="repair">Deck Repair</option>
+                            <option value="railing-stairs">Railing &amp; Stairs</option>
+                            <option value="not-sure">Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Get My Free Deck Estimate →</button>
+                </form>
+                <div class="scarcity-wrap">
+                    <span class="scarcity-tag dark">⚠️ Only <strong>3 project slots left</strong> this month we book out fast</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed Call Button -->
+    <a href="tel:+17813364594" class="call-button-fixed" title="Call Us Now" aria-label="Call Wolf Carpenters">
+        📞
+    </a>
+
+    <!-- Mobile Marquee (mobile only, after hero) -->
+    <div class="mobile-marquee-strip">
+        <div class="mobile-marquee-title">See Our <span>Deck Work</span></div>
+        <div class="mobile-marquee-track">
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_portico_branco_casa_amarela_vista_da_rua.webp" alt="Deck with railing" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Railing</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_lateral_trelica_branca_e_escada.webp" alt="Composite deck" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Composite</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_cinza_com_pergola_branca_e_cadeiras.webp" alt="Deck with furniture" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Outdoor Living</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_duplo_nivel_noturno.webp" alt="Night deck" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Pergola</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_dois_niveis_branco_casa_amarela_vista_frontal.webp" alt="Deck dining area" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Dining</div>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_portico_branco_casa_amarela_vista_da_rua.webp" alt="Deck with railing" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Railing</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_lateral_trelica_branca_e_escada.webp" alt="Composite deck" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Composite</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_cinza_com_pergola_branca_e_cadeiras.webp" alt="Deck with furniture" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Outdoor Living</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_duplo_nivel_noturno.webp" alt="Night deck" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Pergola</div>
+            </div>
+            <div class="mobile-marquee-item">
+                <img src="decks reais/deck_dois_niveis_branco_casa_amarela_vista_frontal.webp" alt="Deck dining area" width="200" height="150" loading="lazy" decoding="async">
+                <div class="mobile-marquee-label">Dining</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STORY SECTION 1: The Problem (AIDA - Attention/Interest) -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>You're Searching for Deck Renovation in Massachusetts. <span style="color: var(--primary-color);">That Tells Us a Lot.</span></h2>
+                <p>It means one of two things your deck is already a problem, or it's about to become one.</p>
+                <p>Maybe the boards are soft. Maybe you noticed a wobble last summer that wasn't there before. Maybe you just don't trust it anymore when the kids run out to play.</p>
+                <p>Either way, you're right to be here. Because ignoring a deck problem doesn't make it cheaper it makes it <strong>worse.</strong></p>
+                <p class="accent">And it starts with one honest conversation.</p>
+            </div>
+            <div style="text-align: center; margin-top: 36px;">
+                <a href="#contact-form" class="cta-button">Let's Talk About Your Deck →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE & AFTER "Desire" section with deck photos -->
+    <section class="before-after-section" id="transformations">
+        <div class="container">
+            <h2 class="section-title">Imagine <span style="color: var(--primary-color);">Your Deck</span> Looking Like This</h2>
+            <p class="section-subtitle">Stepping out this June onto a deck that's solid, safe, and looks exactly like you always wanted it to.</p>
+
+            <div class="ba-grid">
+                <div class="ba-card">
+                    <img src="decks reais/deck_portico_antes_close_corrimao_deteriorado.webp" alt="Deteriorated porch railing before renovation" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="ba-card-label before">Before Deteriorated Railing</div>
+                </div>
+                <div class="ba-card">
+                    <img src="decks reais/deck_portico_depois_colunas_brancas_piso_composito_marrom.webp" alt="New porch with white columns and composite after" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="ba-card-label after">After New Columns &amp; Composite</div>
+                </div>
+                <div class="ba-card">
+                    <img src="decks reais/deck_portico_antes_casa_amarela_vista_completa.webp" alt="Old porch full view before renovation" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="ba-card-label before">Before Full View</div>
+                </div>
+                <div class="ba-card">
+                    <img src="decks reais/deck_portico_depois_casa_amarela_vista_completa.webp" alt="Renovated porch full view after transformation" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="ba-card-label after">After Complete Transformation</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact-form" class="cta-button" style="background: var(--primary-color); color: var(--secondary-color);">I Want My Deck Like This →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY SECTION 2: The Desire (AIDA - Desire) -->
+    <section class="story-section dark">
+        <div class="container">
+            <div class="story-content">
+                <h2>Imagine Stepping Out This June Onto a Deck That's <span style="color: var(--primary-color);">Solid, Safe, and Beautiful.</span></h2>
+                <p>No wobble. No rot. No embarrassment when guests come over.</p>
+                <p>Just a clean, level surface with the right railing, the right material, and the right look one that makes your backyard feel like the outdoor room you always wanted.</p>
+                <p>That's what a renovation done right looks like.</p>
+                <p class="accent">And it starts with one honest conversation.</p>
+            </div>
+            <div style="text-align: center; margin-top: 36px;">
+                <a href="tel:+17813364594" class="cta-button">📞 Call Us Now Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Section -->
+    <section class="trust-badges-section">
+        <div class="container">
+            <p class="trust-label">Why homeowners trust Wolf Carpenters for deck work</p>
+            <div class="trust-badges-grid">
+                <div class="trust-badge-card">
+                    <div class="trust-badge-icon">🏅</div>
+                    <div class="trust-badge-info">
+                        <span class="trust-badge-value">Licensed</span>
+                        <span class="trust-badge-desc">&amp; Fully Insured</span>
+                    </div>
+                </div>
+                <div class="trust-badge-card">
+                    <div class="trust-badge-icon">📅</div>
+                    <div class="trust-badge-info">
+                        <span class="trust-badge-value">10+ Years</span>
+                        <span class="trust-badge-desc">of Experience</span>
+                    </div>
+                </div>
+                <div class="trust-badge-card">
+                    <div class="trust-badge-icon">🪵</div>
+                    <div class="trust-badge-info">
+                        <span class="trust-badge-value">Wood &amp; Composite</span>
+                        <span class="trust-badge-desc">Material Experts</span>
+                    </div>
+                </div>
+                <div class="trust-badge-card">
+                    <div class="trust-badge-icon">🔑</div>
+                    <div class="trust-badge-info">
+                        <span class="trust-badge-value">Turnkey</span>
+                        <span class="trust-badge-desc">Full Service</span>
+                    </div>
+                </div>
+                <div class="trust-badge-card">
+                    <div class="trust-badge-icon">⭐</div>
+                    <div class="trust-badge-info">
+                        <span class="trust-badge-value">5-Star</span>
+                        <span class="trust-badge-desc">Rated by Clients</span>
+                    </div>
+                </div>
+                <div class="trust-badge-card">
+                    <div class="trust-badge-icon">📋</div>
+                    <div class="trust-badge-info">
+                        <span class="trust-badge-value">Free</span>
+                        <span class="trust-badge-desc">Detailed Estimate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Our Deck <span style="color: var(--primary-color);">Portfolio</span></h2>
+            <p class="section-subtitle">Browse our gallery of real deck projects built across Massachusetts</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="decks reais/deck_cinza_grande_vista_aerea_com_aro_de_basquete_inverno.webp" alt="Large deck with outdoor kitchen and jacuzzi" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <h4>Outdoor Living Suite</h4>
+                        <p>Kitchen, jacuzzi &amp; lounge</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="decks reais/deck_portico_branco_casa_amarela_vista_da_rua.webp" alt="Dark composite deck with fire pit" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <h4>Fire Pit Deck</h4>
+                        <p>Composite &amp; stone combination</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="decks reais/deck_escada_composito_marrom_com_corrimao_branco_e_trelica.webp" alt="Natural wood deck with stairs and railing" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <h4>Multi-Level Wood Deck</h4>
+                        <p>Custom stairs &amp; railing</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="decks reais/deck_dois_niveis_branco_casa_amarela_vista_frontal.webp" alt="Deck with outdoor dining" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <h4>Entertaining Space</h4>
+                        <p>Perfect for gatherings</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="decks reais/deck_lateral_trelica_branca_e_escada.webp" alt="Brown composite deck at sunset" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <h4>Sunset Composite Deck</h4>
+                        <p>Low-maintenance beauty</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="decks reais/deck_duplo_nivel_noturno.webp" alt="Illuminated deck with pergola at night" width="800" height="280" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <h4>Night Pergola Deck</h4>
+                        <p>Integrated lighting system</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact-form" class="cta-button">Start My Deck Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Wolf Carpenters <span style="color: var(--primary-color);">for Your Deck?</span></h2>
+            <p class="section-subtitle">Expertise you can trust, results that exceed expectations</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Real Carpentry Expertise</h3>
+                    <p>Over a decade of building decks that survive Massachusetts winters. We understand wood movement, composite expansion, and what lasts vs. what doesn't.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🪵</div>
+                    <h3>Wood &amp; Composite Specialists</h3>
+                    <p>Whether you want the warmth of natural wood or the low-maintenance life of composite, we know both inside out and we'll help you pick the right one.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔑</div>
+                    <h3>Turnkey Service</h3>
+                    <p>From permits to final walkthrough we handle it all. Design, materials, construction, railing, stairs, lighting. One team, one point of contact.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📐</div>
+                    <h3>Custom Design</h3>
+                    <p>No cookie-cutter rectangles. Multi-level decks, built-in seating, pergolas, fire pit areas we design around how you actually live and entertain.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Strong ROI</h3>
+                    <p>A quality deck renovation returns 65-80% of your investment at resale and gives you an outdoor living room to enjoy every day until then.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Efficient Timeline</h3>
+                    <p>Most deck renovations completed in 1-3 weeks depending on scope. We work efficiently without cutting corners so you can enjoy your summer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="team-content">
+                <div class="team-images">
+                    <div class="team-image-main">
+                        <div class="team-video-wrapper">
+                            <video
+                                id="team-video"
+                                class="team-vid"
+                                muted
+                                loop
+                                playsinline
+                                preload="none"
+                                poster="6 - Meet the Team - Wolf Carpenters Crew/team-group-in-warehouse.webp"
+                                aria-label="Wolf Carpenters team institutional video"
+                            >
+                                <source data-src="team-desktop.mp4" type="video/mp4" media="(min-width: 769px)">
+                                <source data-src="team-mobile.mp4" type="video/mp4">
+                            </video>
+                            <button class="team-mute-btn is-muted" id="team-mute-btn" aria-label="Unmute video" title="Click to unmute">
+                                <!-- Som ativo (aparece quando NÃO está muted) -->
+                                <svg class="icon-sound" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"/>
+                                </svg>
+                                <!-- Muted/riscado (aparece quando está muted estado inicial) -->
+                                <svg class="icon-muted" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0 0 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06A8.99 8.99 0 0 0 17.73 18l2 2L21 18.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="team-image-small">
+                        <img src="6 - Meet the Team - Wolf Carpenters Crew/team-leaders-closeup.webp" alt="Wolf Carpenters Leaders" width="400" height="180" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-image-small">
+                        <img src="6 - Meet the Team - Wolf Carpenters Crew/team-planning-blueprints.webp" alt="Team Planning Meeting" width="400" height="180" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="team-text">
+                    <span class="family-badge">🏡 Family-Owned Since 2015</span>
+                    <h2>Meet The <span style="color: var(--primary-color);">Wolf Family</span> Behind Your Dream Deck</h2>
+                    <p><strong>We're not just contractors we're a family business.</strong> For over 10 years, Wolf has been building and renovating decks with the same care we'd give our own family's home.</p>
+                    <p>From a small family carpentry shop to a full team of deck and outdoor living specialists, every project is treated like family because our clients become part of the Wolf family.</p>
+                    <p><strong>When you choose Wolf, you get tradition, craftsmanship values, and personal commitment to excellence.</strong></p>
+                    <p style="color: var(--primary-color); font-weight: 600; font-size: 1.15rem;">Your deck deserves to be built by people who truly care.</p>
+                    
+                    <div class="team-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Families Served</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Family Business</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#contact-form" class="cta-button">Start My Deck Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Proven <span style="color: var(--primary-color);">Deck Building</span> Process</h2>
+            <p class="section-subtitle">From first conversation to final walkthrough clarity at every step</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>We discuss your vision, your yard, and your budget. No obligation, no pressure just expert guidance on what works best.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Site Assessment</h3>
+                    <p>We evaluate your existing deck (or yard), take measurements, and assess structural and grading considerations.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Design &amp; Materials</h3>
+                    <p>Custom deck design with material recommendations composite vs. wood, railing styles, lighting, and layout options.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Permits</h3>
+                    <p>We handle all building permits and code requirements no headaches for you.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Demo &amp; Prep</h3>
+                    <p>Old deck removed, ground prepared, and footings set for a rock-solid foundation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h3>Build</h3>
+                    <p>Expert craftsmen build your deck with precision framing, decking, railing, stairs, and all custom features.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">7</div>
+                    <h3>Finishing Touches</h3>
+                    <p>Lighting, trim, sealing (for wood), and all the details that make your deck perfect.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">8</div>
+                    <h3>Final Walkthrough</h3>
+                    <p>We ensure everything is perfect before you fire up the grill on your beautiful new deck.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span style="color: var(--primary-color);">Questions</span></h2>
+            <p class="section-subtitle">Get answers to common questions about deck renovation</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How long does a deck renovation typically take?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most deck renovations take 1-3 weeks from demo to completion. A straightforward board replacement might be done in a week, while a full custom build with pergola, lighting, and multi-level design may take closer to 3 weeks. We provide a clear timeline upfront so there are no surprises.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Should I go with wood or composite decking?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It depends on your priorities. <strong>Wood</strong> (like pressure-treated or cedar) costs less upfront and has a natural look, but needs regular staining and sealing. <strong>Composite</strong> (like Trex or TimberTech) costs more initially but is virtually maintenance-free and lasts 25-50 years. We'll help you choose based on your budget, lifestyle, and goals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Will a deck renovation increase my property value?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! A quality deck renovation typically returns 65-80% of your investment at resale, and it dramatically increases buyer appeal. In Massachusetts, outdoor living space is a premium feature that buyers actively seek. And you get to enjoy it every single day until then.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you handle permits for deck projects?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Most deck projects in Massachusetts require a building permit, especially if you're changing the footprint or height. We handle the entire permit process applications, plans, inspections so you don't have to deal with any of it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can you add features like a pergola, fire pit area, or built-in seating?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes that's what makes a Wolf deck special. We design and build custom features like pergolas, integrated lighting, fire pit areas, built-in benches, planters, and outdoor kitchens. We design around how you actually use your outdoor space, not just a basic rectangle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our <span style="color: var(--primary-color);">Clients</span> Say</h2>
+            <p class="section-subtitle">Real feedback from homeowners who trusted us with their deck projects</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Our old deck was a safety hazard. Wolf Carpenters tore it down and built us a gorgeous composite deck in just 10 days. The railing, the lighting, the stairs everything is perfect. We practically live outside now."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Mark &amp; Lisa</h4>
+                            <p>Full Deck Renovation Composite</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"We wanted a multi-level deck with a fire pit area and pergola. Wolf designed exactly what we envisioned and executed it beautifully. The attention to detail is incredible. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Sarah T.</h4>
+                            <p>Custom Multi-Level Deck</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Professional, honest, and on time. They helped us choose the right composite material for our budget, handled the permit, and finished ahead of schedule. Our neighbors keep asking who built our deck."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>David K.</h4>
+                            <p>Composite Deck Upgrade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA + Contact Form Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-flex" style="max-width: 1200px; margin: 0 auto; display: flex; gap: 60px; align-items: center; flex-wrap: wrap;">
+                <div class="cta-left" style="flex: 1; min-width: 400px; color: var(--white);">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--white);">Ready to Transform <span style="color: var(--primary-color);">Your Deck?</span></h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 10px; color: rgba(255,255,255,0.9);">Schedule a free consultation and detailed estimate for your deck project. Let's build the outdoor space you deserve.</p>
+                    <p style="margin-bottom: 30px;"><span class="scarcity-tag">Summer is coming <strong>only 4 slots left</strong> for spring builds</span></p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 30px;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span style="font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem; color: #fff;">Free On-Site Consultation</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span style="font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem; color: #fff;">Detailed Project Estimate</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span style="font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem; color: #fff;">No Obligation, No Pressure</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span style="font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem; color: #fff;">10+ Years Experience</span>
+                        </div>
+                    </div>
+
+                    <!-- Call Button CTA -->
+                    <div style="margin-top: 40px;">
+                        <a href="tel:+17813364594" class="cta-button" style="display: inline-flex; align-items: center; gap: 10px; font-size: 1.2rem; padding: 18px 40px;">
+                            📞 Call Now (781) 336-4594
+                        </a>
+                        <p style="margin-top: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.5);">Or fill out the form we'll call you within 24 hours</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="hero-form-container" id="contact-form" style="margin: 0; scroll-margin-top: 120px;">
+                    <h3>Claim Your Free Deck Estimate</h3>
+                    <p>Summer slots are going fast secure yours today</p>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name *</label>
+                            <input type="text" id="contact-name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone Number *</label>
+                            <input type="tel" id="contact-phone" name="phone" required placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-deck-type">What kind of deck project? *</label>
+                            <select id="contact-deck-type" name="deck-type" required>
+                                <option value="">Select project type</option>
+                                <option value="full-renovation">Full Deck Renovation</option>
+                                <option value="new-deck">New Deck Build</option>
+                                <option value="composite-upgrade">Composite Upgrade</option>
+                                <option value="repair">Deck Repair</option>
+                                <option value="railing-stairs">Railing &amp; Stairs</option>
+                                <option value="not-sure">Not Sure Yet</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-button">Get Free Deck Consultation →</button>
+                    </form>
+                    <div class="scarcity-wrap">
+                        <span class="scarcity-tag dark">Only <strong>4 project slots</strong> open Spring is filling fast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Wolf Carpenters. All rights reserved. | Expert Deck Renovation Services Massachusetts</p>
+        </div>
+    </footer>
+    
+    <!-- Team Video mute toggle -->
+    <script>
+    (function() {
+        function initTeamVideo() {
+            var vid = document.getElementById('team-video');
+            var btn = document.getElementById('team-mute-btn');
+            if (!vid) return;
+
+            function updateBtn() {
+                if (!btn) return;
+                if (vid.muted) {
+                    btn.classList.add('is-muted');
+                    btn.setAttribute('aria-label', 'Unmute video');
+                    btn.setAttribute('title', 'Click to unmute');
+                } else {
+                    btn.classList.remove('is-muted');
+                    btn.setAttribute('aria-label', 'Mute video');
+                    btn.setAttribute('title', 'Click to mute');
+                }
+            }
+
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    vid.muted = !vid.muted;
+                    updateBtn();
+                    if (vid.paused) vid.play().catch(function(){});
+                });
+            }
+
+            updateBtn();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initTeamVideo);
+        } else {
+            initTeamVideo();
+        }
+    })();
+    </script>
+
+    <!-- FAQ Toggle -->
+    <script>
+    function toggleFaq(element) {
+        var faqItem = element.parentElement;
+        var answer = element.nextElementSibling;
+        var icon = element.querySelector('.faq-icon');
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+            if (item !== faqItem) {
+                item.querySelector('.faq-answer').style.maxHeight = '0';
+                item.querySelector('.faq-icon').textContent = '+';
+                item.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+            }
+        });
+        if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+            answer.style.maxHeight = '0';
+            icon.textContent = '+';
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            icon.textContent = 'x';
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+    </script>
+
+    <!-- Image Lazy Loading (optimized) -->
+    <script>
+    if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('loaded');io.unobserve(e.target)}})},{rootMargin:'200px'});document.querySelectorAll('img[loading="lazy"]').forEach(function(i){io.observe(i)})}
+    </script>
+
+    <!-- Lazy Video Loading — only load sources when video is near viewport -->
+    <script>
+    (function(){
+        var vid=document.getElementById('team-video');
+        if(!vid)return;
+        var loaded=false;
+        function loadVideo(){
+            if(loaded)return;loaded=true;
+            vid.querySelectorAll('source[data-src]').forEach(function(s){s.src=s.getAttribute('data-src');s.removeAttribute('data-src')});
+            vid.load();vid.play().catch(function(){});
+        }
+        if('IntersectionObserver' in window){
+            var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){loadVideo();obs.disconnect()}})},{rootMargin:'300px'});
+            obs.observe(vid);
+        }else{loadVideo()}
+    })();
+    </script>
+
+    <!-- Hero Slideshow -->
+    <script>
+    (function() {
+        var slides = document.querySelectorAll('.hero-slide');
+        if (slides.length < 2) return;
+        var current = 0;
+        setInterval(function() {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 6000);
+    })();
+    </script>
+
+    <!-- Service Worker Cleanup & Tracking -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for (var reg of registrations) { reg.unregister(); }
+            });
+        }
+
+        (function() {
+            var fonte = sessionStorage.getItem('fonte') || '';
+            var plataforma = sessionStorage.getItem('plataforma') || '';
+            if (!fonte || !plataforma) {
+                var urlParams = new URLSearchParams(window.location.search);
+                fonte = urlParams.get('fonte') || fonte;
+                plataforma = urlParams.get('plataforma') || plataforma;
+            }
+            if (fonte && plataforma) {
+                document.querySelectorAll('input[name="fonte"]').forEach(function(input) { input.value = fonte; });
+                document.querySelectorAll('input[name="plataforma"]').forEach(function(input) { input.value = plataforma; });
+                sessionStorage.removeItem('fonte');
+                sessionStorage.removeItem('plataforma');
+                if (window.location.search) {
+                    var cleanUrl = window.location.origin + window.location.pathname;
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+            }
+        })();
+    </script>
+
+    <!-- Deferred Third-Party Tracking (loaded after page is interactive) -->
+    <script>
+    (function(){
+        function loadTracking(){
+            // HighLevel Call Tracking
+            var s1=document.createElement('script');s1.src='https://backend.leadconnectorhq.com/appengine/loc/xZgZbZ25TgMXr6HsImkO/pool/hyEwFNyjGgwjhY1gNhZR/number_pool.js';s1.async=true;document.body.appendChild(s1);
+            var s2=document.createElement('script');s2.src='https://backend.leadconnectorhq.com/appengine/js/user_session.js';s2.async=true;document.body.appendChild(s2);
+
+            // Google tag (gtag.js)
+            var gt=document.createElement('script');gt.src='https://www.googletagmanager.com/gtag/js?id=AW-16525015107';gt.async=true;document.head.appendChild(gt);
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-16525015107');
+
+            // Microsoft Clarity
+            (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w1bhsrq9sb");
+
+            // Meta Pixel
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init','4126955510867529');fbq('track','PageView');
+        }
+        // Load tracking after user interaction or after 3.5s (whichever comes first)
+        var done=false;
+        function go(){if(done)return;done=true;loadTracking()}
+        if(document.readyState==='complete'){setTimeout(go,100)}
+        else{window.addEventListener('load',function(){setTimeout(go,1500)})}
+        ['scroll','click','touchstart','mousemove','keydown'].forEach(function(e){document.addEventListener(e,go,{once:true,passive:true})});
+        setTimeout(go,3500);
+    })();
+    </script>
+</body>
+</html>
