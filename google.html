@@ -27,7 +27,7 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="0 - Brand Logo/brand-logo-wolfcarpenters.webp" as="image">
-    <link rel="preload" href="decks reais/deck_duplo_nivel_noturno.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="novas fotos deck./Covered Porch Deck.webp" as="image" fetchpriority="high">
     
     <!-- Fonts (non-render-blocking) -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -88,21 +88,13 @@
             overflow: hidden; padding-top: 120px; padding-bottom: 60px;
             background: linear-gradient(135deg, var(--secondary-color) 0%, #2a2a2a 100%);
         }
-        .hero-slideshow {
+        .hero-bg {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;
         }
-        .hero-slide {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0; visibility: hidden;
-            transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
-        }
-        .hero-slide.active { opacity: 1; visibility: visible; }
-        .hero-slide img {
-            width: 100%; height: 100%; object-fit: cover; object-position: center;
+        .hero-bg img {
+            width: 100%; height: 100%; object-fit: cover; object-position: center top;
             display: block;
         }
-        .hero-slide.active img { animation: kenBurnsZoom 15s ease-in-out forwards; will-change: transform; }
-        @keyframes kenBurnsZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
         .hero-overlay {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(135deg, rgba(1,1,1,0.90) 0%, rgba(1,1,1,0.75) 100%);
@@ -665,13 +657,8 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-slideshow">
-            <div class="hero-slide active">
-                <img src="decks reais/deck_duplo_nivel_noturno.webp" alt="Beautiful deck renovation at night with pergola" width="1200" height="800" fetchpriority="high" decoding="async">
-            </div>
-            <div class="hero-slide">
-                <img src="decks reais/deck_cinza_grande_vista_aerea_com_aro_de_basquete_inverno.webp" alt="Large composite deck with outdoor living space" width="1200" height="800" decoding="async" loading="lazy">
-            </div>
+        <div class="hero-bg">
+            <img src="novas fotos deck./Covered Porch Deck.webp" alt="Covered porch deck renovation by Wolf Carpenters" width="900" height="600" fetchpriority="high" decoding="async">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -1417,19 +1404,6 @@
     })();
     </script>
 
-    <!-- Hero Slideshow -->
-    <script>
-    (function() {
-        var slides = document.querySelectorAll('.hero-slide');
-        if (slides.length < 2) return;
-        var current = 0;
-        setInterval(function() {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 6000);
-    })();
-    </script>
 
     <!-- Service Worker Cleanup & Tracking -->
     <script>
