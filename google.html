@@ -1434,6 +1434,67 @@
         })();
     </script>
 
+    <!-- n8n Webhook Form Submission -->
+    <script>
+    (function () {
+        var WEBHOOK_URL = 'https://mediagrowth-n8n.63kuy3.easypanel.host/webhook/53d5ad38-b5b8-496a-ab98-b204a15068a9';
+
+        function handleFormSubmit(form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var data = {
+                    name: form.querySelector('[name="name"]').value.trim(),
+                    email: form.querySelector('[name="email"]').value.trim(),
+                    phone: form.querySelector('[name="phone"]').value.trim(),
+                    Qualified_question: form.querySelector('[name="deck-type"]').value,
+                    PLATAFORMA: 'GOOGLE',
+                    campaign_name: 'Deck Renovation',
+                    page_name: 'Deck Renovation Massachusetts'
+                };
+
+                var btn = form.querySelector('[type="submit"]');
+                var originalText = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'Sending...';
+
+                fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                })
+                .then(function (res) {
+                    if (res.ok || res.status === 200 || res.status === 201) {
+                        btn.textContent = '✓ Request Sent!';
+                        btn.style.background = '#4caf50';
+                        form.reset();
+                    } else {
+                        throw new Error('Server error ' + res.status);
+                    }
+                })
+                .catch(function () {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                    alert('Something went wrong. Please try again or call us directly.');
+                });
+            });
+        }
+
+        function init() {
+            var heroForm = document.getElementById('hero-form');
+            var ctaForm = document.getElementById('cta-form');
+            if (heroForm) handleFormSubmit(heroForm);
+            if (ctaForm) handleFormSubmit(ctaForm);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
+
     <!-- Deferred Third-Party Tracking (loaded after page is interactive) -->
     <script>
     (function(){
