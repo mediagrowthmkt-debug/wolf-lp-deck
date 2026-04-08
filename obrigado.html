@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You – Wolf Carpenters</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/webp" href="0 - Brand Logo/brand-logo-wolfcarpenters.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary-color: #E1BA47;
+            --secondary-color: #1a1a1a;
+            --text-dark: #1a1a1a;
+            --text-light: #fff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #0f0f0f;
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background subtle pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(225,186,71,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(225,186,71,0.04) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            background: #1a1a1a;
+            border: 1px solid rgba(225,186,71,0.2);
+            border-radius: 16px;
+            max-width: 580px;
+            width: 100%;
+            padding: 56px 48px;
+            text-align: center;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+            animation: fadeUp 0.7s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Logo */
+        .logo {
+            margin-bottom: 32px;
+        }
+        .logo img {
+            height: 70px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Check icon */
+        .check-wrap {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #E1BA47, #c9a53e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            box-shadow: 0 8px 32px rgba(225,186,71,0.35);
+            animation: popIn 0.5s 0.4s cubic-bezier(.34,1.56,.64,1) both;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0); opacity: 0; }
+            to   { transform: scale(1); opacity: 1; }
+        }
+
+        .check-wrap svg {
+            width: 40px;
+            height: 40px;
+            stroke: #0f0f0f;
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Checkmark draw animation */
+        .check-wrap svg path {
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+            animation: drawCheck 0.4s 0.8s ease forwards;
+        }
+
+        @keyframes drawCheck {
+            to { stroke-dashoffset: 0; }
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        h1 span {
+            color: var(--primary-color);
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #b0b0b0;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .subtitle strong {
+            color: #fff;
+        }
+
+        /* Steps */
+        .steps {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+
+        .steps-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .step:last-child { margin-bottom: 0; }
+
+        .step-num {
+            min-width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: #0f0f0f;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .step-text {
+            font-size: 0.95rem;
+            color: #d0d0d0;
+            line-height: 1.5;
+        }
+
+        .step-text strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* CTA phone */
+        .cta-phone {
+            background: linear-gradient(135deg, var(--primary-color), #c9a53e);
+            color: #0f0f0f;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 6px 24px rgba(225,186,71,0.3);
+            width: 100%;
+        }
+
+        .cta-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(225,186,71,0.45);
+        }
+
+        .back-link {
+            font-size: 0.88rem;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--primary-color); }
+
+        /* Footer note */
+        .footer-note {
+            position: relative;
+            z-index: 1;
+            margin-top: 28px;
+            font-size: 0.8rem;
+            color: #444;
+            text-align: center;
+        }
+
+        @media (max-width: 520px) {
+            .card { padding: 40px 24px; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <div class="logo">
+            <img src="0 - Brand Logo/brand-logo-wolfcarpenters.webp" alt="Wolf Carpenters" width="140" height="70">
+        </div>
+
+        <div class="check-wrap">
+            <svg viewBox="0 0 48 48">
+                <path d="M10 24 L20 34 L38 14"/>
+            </svg>
+        </div>
+
+        <h1>We Got Your Request <span>✓</span></h1>
+
+        <p class="subtitle">
+            Thanks for reaching out! <strong>Check your inbox — we're sending you a confirmation email right now.</strong><br><br>
+            A Wolf Carpenters expert will contact you within a few minutes to schedule your <strong>free deck estimate</strong>.
+        </p>
+
+        <div class="steps">
+            <div class="steps-title">What happens next</div>
+
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-text">
+                    <strong>Email on the way</strong>
+                    Check your inbox (and spam folder) — confirmation arriving in minutes.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-text">
+                    <strong>We'll call you</strong>
+                    One of our deck specialists will reach out shortly to confirm your free estimate.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-text">
+                    <strong>On-site assessment</strong>
+                    We come to you, measure, advise — at no cost, no obligation.
+                </div>
+            </div>
+        </div>
+
+        <a href="tel:+16172861300" class="cta-phone">📞 Need Faster Help? Call Us Now</a>
+
+        <a href="google.html" class="back-link">← Back to the main page</a>
+
+    </div>
+
+    <p class="footer-note">© 2026 Wolf Carpenters · Massachusetts · wolfcarpenters.com</p>
+
+    <!-- Tracking: fire conversion on thank-you page load -->
+    <script>
+    (function(){
+        function loadTracking(){
+            // Google Ads Conversion
+            var gt=document.createElement('script');gt.src='https://www.googletagmanager.com/gtag/js?id=AW-16525015107';gt.async=true;document.head.appendChild(gt);
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+            gtag('js',new Date());
+            gtag('config','AW-16525015107');
+            gtag('event','conversion',{'send_to':'AW-16525015107'});
+
+            // Meta Pixel – Lead event
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init','4126955510867529');fbq('track','Lead');
+
+            // Microsoft Clarity
+            (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w1bhsrq9sb");
+        }
+        if(document.readyState==='complete'){setTimeout(loadTracking,200)}
+        else{window.addEventListener('load',function(){setTimeout(loadTracking,200)})}
+    })();
+    </script>
+
+</body>
+</html>

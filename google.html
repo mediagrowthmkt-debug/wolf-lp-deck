@@ -1465,9 +1465,7 @@
                 })
                 .then(function (res) {
                     if (res.ok || res.status === 200 || res.status === 201) {
-                        btn.textContent = '✓ Request Sent!';
-                        btn.style.background = '#4caf50';
-                        form.reset();
+                        window.location.href = 'obrigado.html';
                     } else {
                         throw new Error('Server error ' + res.status);
                     }
