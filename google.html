@@ -610,6 +610,92 @@
             .cta-section .cta-left { min-width: unset !important; }
         }
     </style>
+
+    <!-- ===== GOOGLE SITELINKS – Structured Data ===== -->
+    <!-- Sitelinks aparecem no anúncio/resultado orgânico do Google abaixo do título principal -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Wolf Carpenters – Deck Renovation Massachusetts",
+      "url": "https://wolfcarpenters.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wolfcarpenters.com/google.html#contact-form"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Deck Renovation Massachusetts – Wolf Carpenters",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Get a Free Estimate",
+          "description": "Request your no-obligation free deck estimate today",
+          "url": "https://wolfcarpenters.com/google.html#contact-form"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Deck Portfolio",
+          "description": "See our real deck projects built across Massachusetts",
+          "url": "https://wolfcarpenters.com/google.html#portfolio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Before & After Transformations",
+          "description": "Real deck renovation before and after photos",
+          "url": "https://wolfcarpenters.com/google.html#transformations"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Why Choose Wolf Carpenters",
+          "description": "Licensed, insured, 10+ years – wood & composite specialists",
+          "url": "https://wolfcarpenters.com/google.html#benefits"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Meet Our Team",
+          "description": "Family-owned since 2015 – real people, real craftsmanship",
+          "url": "https://wolfcarpenters.com/google.html#team"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Our Process",
+          "description": "8-step deck building process from consultation to final walkthrough",
+          "url": "https://wolfcarpenters.com/google.html#process"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "FAQ",
+          "description": "Common questions about deck renovation in Massachusetts",
+          "url": "https://wolfcarpenters.com/google.html#faq"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Client Reviews",
+          "description": "5-star reviews from homeowners we've served",
+          "url": "https://wolfcarpenters.com/google.html#reviews"
+        }
+      ]
+    }
+    </script>
+    <!-- ===== /GOOGLE SITELINKS ===== -->
 </head>
 <body>
 
@@ -793,7 +879,7 @@
     </div>
 
     <!-- STORY SECTION 1: The Problem (AIDA - Attention/Interest) -->
-    <section class="story-section">
+    <section class="story-section" id="about">
         <div class="container">
             <div class="story-content">
                 <h2>You're Searching for Deck Renovation in Massachusetts. <span style="color: var(--primary-color);">That Tells Us a Lot.</span></h2>
@@ -907,7 +993,7 @@
     </section>
 
     <!-- Portfolio Gallery -->
-    <section class="gallery-section">
+    <section class="gallery-section" id="portfolio">
         <div class="container">
             <h2 class="section-title">Our Deck <span style="color: var(--primary-color);">Portfolio</span></h2>
             <p class="section-subtitle">Browse our gallery of real deck projects built across Massachusetts</p>
@@ -969,7 +1055,7 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="benefits-section">
+    <section class="benefits-section" id="benefits">
         <div class="container">
             <h2 class="section-title">Why Choose Wolf Carpenters <span style="color: var(--primary-color);">for Your Deck?</span></h2>
             <p class="section-subtitle">Expertise you can trust, results that exceed expectations</p>
@@ -1080,7 +1166,7 @@
     </section>
 
     <!-- Process Section -->
-    <section class="process-section">
+    <section class="process-section" id="process">
         <div class="container">
             <h2 class="section-title">Our Proven <span style="color: var(--primary-color);">Deck Building</span> Process</h2>
             <p class="section-subtitle">From first conversation to final walkthrough clarity at every step</p>
@@ -1131,7 +1217,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section" id="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked <span style="color: var(--primary-color);">Questions</span></h2>
             <p class="section-subtitle">Get answers to common questions about deck renovation</p>
@@ -1191,7 +1277,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <section class="testimonials-section" id="reviews">
         <div class="container">
             <h2 class="section-title">What Our <span style="color: var(--primary-color);">Clients</span> Say</h2>
             <p class="section-subtitle">Real feedback from homeowners who trusted us with their deck projects</p>
