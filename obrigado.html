@@ -322,5 +322,46 @@
     })();
     </script>
 
+    <!-- Phone Call Button Conversion Tracking -->
+    <script>
+    (function(){
+        var WEBHOOK_URL = 'https://mediagrowth-n8n.63kuy3.easypanel.host/webhook/53d5ad38-b5b8-496a-ab98-b204a15068a9';
+
+        function trackCallClick(){
+            if(typeof gtag==='function'){
+                gtag('event','conversion',{'send_to':'AW-16525015107'});
+            }
+            if(typeof fbq==='function'){
+                fbq('track','Lead');
+            }
+            var data = {
+                name: 'Call Button Click',
+                phone: '+16172861300',
+                email: '',
+                Qualified_question: 'call_click',
+                PLATAFORMA: 'GOOGLE',
+                campaign_name: 'Deck Renovation',
+                page_name: 'Deck Renovation Massachusetts - Thank You'
+            };
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).catch(function(){});
+        }
+
+        function init(){
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+                el.addEventListener('click', trackCallClick);
+            });
+        }
+        if(document.readyState==='loading'){
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
+
 </body>
 </html>

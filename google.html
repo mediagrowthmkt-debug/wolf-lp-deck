@@ -1607,5 +1607,49 @@
         setTimeout(go,3500);
     })();
     </script>
+
+    <!-- Phone Call Button Conversion Tracking -->
+    <script>
+    (function(){
+        var WEBHOOK_URL = 'https://mediagrowth-n8n.63kuy3.easypanel.host/webhook/53d5ad38-b5b8-496a-ab98-b204a15068a9';
+
+        function trackCallClick(){
+            // Google Ads conversion
+            if(typeof gtag==='function'){
+                gtag('event','conversion',{'send_to':'AW-16525015107'});
+            }
+            // Meta Pixel Lead
+            if(typeof fbq==='function'){
+                fbq('track','Lead');
+            }
+            // n8n webhook — registra como call click no CRM
+            var data = {
+                name: 'Call Button Click',
+                phone: '+17812063478',
+                email: '',
+                Qualified_question: 'call_click',
+                PLATAFORMA: 'GOOGLE',
+                campaign_name: 'Deck Renovation',
+                page_name: 'Deck Renovation Massachusetts'
+            };
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).catch(function(){});
+        }
+
+        function init(){
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+                el.addEventListener('click', trackCallClick);
+            });
+        }
+        if(document.readyState==='loading'){
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
 </body>
 </html>
