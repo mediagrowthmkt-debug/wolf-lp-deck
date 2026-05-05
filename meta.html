@@ -1534,7 +1534,7 @@
                     email: form.querySelector('[name="email"]').value.trim(),
                     phone: form.querySelector('[name="phone"]').value.trim(),
                     Qualified_question: form.querySelector('[name="deck-type"]').value,
-                    PLATAFORMA: 'GOOGLE',
+                    PLATAFORMA: 'META',
                     campaign_name: 'Deck Renovation',
                     page_name: 'Deck Renovation Massachusetts'
                 };
@@ -1551,6 +1551,10 @@
                 })
                 .then(function (res) {
                     if (res.ok || res.status === 200 || res.status === 201) {
+                        // Google Ads conversion — form submit
+                        if(typeof gtag==='function'){ gtag('event','conversion',{'send_to':'AW-16525015107'}); }
+                        // Meta Pixel Lead
+                        if(typeof fbq==='function'){ fbq('track','Lead'); }
                         window.location.href = 'obrigado.html';
                     } else {
                         throw new Error('Server error ' + res.status);
@@ -1628,7 +1632,7 @@
                 phone: '+17812063478',
                 email: '',
                 Qualified_question: 'call_click',
-                PLATAFORMA: 'GOOGLE',
+                PLATAFORMA: 'META',
                 campaign_name: 'Deck Renovation',
                 page_name: 'Deck Renovation Massachusetts'
             };
