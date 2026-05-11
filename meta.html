@@ -549,21 +549,6 @@
         }
         .cta-button:hover { background: #c9a53e; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(225,186,71,0.4); }
 
-        /* === FIXED CALL BUTTON === */
-        .call-button-fixed {
-            position: fixed; bottom: 25px; right: 25px;
-            width: 60px; height: 60px; border-radius: 50%;
-            background: var(--primary-color);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; text-decoration: none;
-            box-shadow: 0 4px 20px rgba(225,186,71,0.4);
-            z-index: 999; animation: pulse-call 2s ease-in-out infinite;
-        }
-        @keyframes pulse-call {
-            0%, 100% { box-shadow: 0 4px 20px rgba(225,186,71,0.4); }
-            50% { box-shadow: 0 4px 30px rgba(225,186,71,0.7); }
-        }
-
         /* === SCARCITY === */
         .scarcity-tag {
             display: inline-flex; align-items: center; gap: 6px;
@@ -832,11 +817,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Fixed Call Button -->
-    <a href="tel:+17812063478" class="call-button-fixed" title="Call Us Now" aria-label="Call Wolf Carpenters">
-        📞
-    </a>
 
     <!-- Mobile Marquee (mobile only, after hero) -->
     <div class="mobile-marquee-strip">
