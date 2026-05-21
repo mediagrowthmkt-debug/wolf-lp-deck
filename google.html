@@ -1530,7 +1530,7 @@
             if (document.getElementById('wolf-human-check-styles')) return;
             var style = document.createElement('style');
             style.id = 'wolf-human-check-styles';
-            style.textContent = '.wolf-hp-field{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}.human-check{background:#f8f8f8;border:1px solid #e0e0e0;border-radius:8px;padding:12px 14px;margin:0 0 15px}.human-check strong{display:block;margin-bottom:8px;font-size:.85rem;font-weight:700;color:#1a1a1a}.human-check small{display:block;color:#666;font-size:.78rem;line-height:1.35;margin-top:8px}.recaptcha-widget{min-height:78px}.manual-human-check{display:none;align-items:center;gap:10px;margin-top:8px;font-size:.92rem;color:#1a1a1a}.manual-human-check input{width:18px;height:18px;accent-color:#E1BA47}.human-check.use-manual .manual-human-check{display:flex}.human-check.use-manual .recaptcha-widget{display:none;min-height:0}';
+            style.textContent = '.wolf-hp-field{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}.human-check{background:#f8f8f8;border:1px solid #e0e0e0;border-radius:8px;padding:12px 14px;margin:0 0 15px}.human-check strong{display:block;margin-bottom:8px;font-size:.85rem;font-weight:700;color:#1a1a1a}.human-check small{display:block;color:#666;font-size:.78rem;line-height:1.35;margin-top:8px}.recaptcha-widget{min-height:78px}.manual-human-check{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:.92rem;color:#1a1a1a}.manual-human-check input{width:18px;height:18px;accent-color:#E1BA47}.human-check.use-google .manual-human-check{display:none}.human-check.use-manual .recaptcha-widget{display:none;min-height:0}';
             document.head.appendChild(style);
         }
 
@@ -1569,6 +1569,8 @@
                 form.dataset.recaptchaWidgetId = String(window.grecaptcha.render(widget, {
                     sitekey: RECAPTCHA_SITE_KEY
                 }));
+                var humanCheck = form.querySelector(".human-check");
+                if (humanCheck) humanCheck.classList.add("use-google");
             } catch (error) {
                 useManualHumanCheck(form);
             }
