@@ -1653,7 +1653,16 @@
                 .then(function (res) {
                     if (res.ok || res.status === 200 || res.status === 201) {
                         // Google Ads conversion   form submit
-                        if(typeof gtag==='function'){ gtag('event','conversion',{'send_to':'AW-16525015107'}); }
+                        if(typeof gtag==='function'){
+                            gtag('event','conversion',{
+                                'send_to':'AW-16525015107/_FGsCODO8OkbEMPw3sc9',
+                                'value':1.0,
+                                'currency':'USD',
+                                'event_category':'lead',
+                                'event_label':'lead_form_submit',
+                                'page_name':'Deck Renovation Massachusetts'
+                            });
+                        }
                         // Meta Pixel Lead
                         if(typeof fbq==='function'){ fbq('track','Lead'); }
                         window.location.href = 'obrigado.html';
@@ -1721,7 +1730,15 @@
         function trackCallClick(){
             // Google Ads conversion
             if(typeof gtag==='function'){
-                gtag('event','conversion',{'send_to':'AW-16525015107'});
+                gtag('event','conversion',{
+                    'send_to':'AW-16525015107/_FGsCODO8OkbEMPw3sc9',
+                    'value':1.0,
+                    'currency':'USD',
+                    'event_category':'lead',
+                    'event_label':'phone_call_click',
+                    'phone_number':'+17812063478',
+                    'page_name':'Deck Renovation Massachusetts'
+                });
             }
             // Meta Pixel Lead
             if(typeof fbq==='function'){

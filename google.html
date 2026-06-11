@@ -24,6 +24,36 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://www.clarity.ms">
+
+    <!-- Google Ads + GA4 conversion tracking -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'AW-16525015107');
+      gtag('config', 'G-F1Z5VEGBBJ', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true
+      });
+      window.wolfTrackGoogleLead = function(source, extra) {
+        var params = Object.assign({
+          send_to: 'AW-16525015107/_FGsCODO8OkbEMPw3sc9',
+          value: 1.0,
+          currency: 'USD',
+          event_category: 'lead',
+          event_label: source,
+          lead_source: source,
+          page_name: 'Deck Renovation Massachusetts',
+          page_location: window.location.href
+        }, extra || {});
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', params);
+          gtag('event', source, params);
+        }
+      };
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16525015107"></script>
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="0 - Brand Logo/brand-logo-wolfcarpenters.webp" as="image">
@@ -1670,7 +1700,15 @@
                 })
                 .then(function (res) {
                     if (res.ok || res.status === 200 || res.status === 201) {
-                        if(typeof gtag==='function'){ gtag('event','conversion',{'send_to':'AW-16525015107'}); }
+                        if(typeof gtag==='function'){
+                            gtag('event','lead_form_submit', {
+                                event_category: 'lead',
+                                event_label: 'lead_form_submit',
+                                form_id: form.id || '',
+                                form_name: form.id === 'cta-form' ? 'bottom_cta_form' : 'hero_form',
+                                page_name: 'Deck Renovation Massachusetts'
+                            });
+                        }
                         if(typeof fbq==='function'){ fbq('track','Lead'); }
                         window.location.href = 'obrigado.html';
                     } else {
@@ -1710,7 +1748,10 @@
 
             // Google tag (gtag.js)
             var gt=document.createElement('script');gt.src='https://www.googletagmanager.com/gtag/js?id=AW-16525015107';gt.async=true;document.head.appendChild(gt);
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-16525015107');
+            window.dataLayer=window.dataLayer||[];
+            window.gtag=window.gtag||function(){dataLayer.push(arguments)};
+            gtag('config','AW-16525015107');
+            gtag('config','G-F1Z5VEGBBJ');
 
             // Microsoft Clarity
             (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w1bhsrq9sb");
@@ -1736,8 +1777,16 @@
 
         function trackCallClick(){
             // Google Ads conversion
-            if(typeof gtag==='function'){
-                gtag('event','conversion',{'send_to':'AW-16525015107'});
+            if(typeof window.wolfTrackGoogleLead==='function'){
+                window.wolfTrackGoogleLead('phone_call_click', {
+                    phone_number: '+17812063478'
+                });
+            } else if(typeof gtag==='function'){
+                gtag('event','phone_call_click',{
+                    event_category:'lead',
+                    event_label:'phone_call_click',
+                    phone_number:'+17812063478'
+                });
             }
             // Meta Pixel Lead
             if(typeof fbq==='function'){
